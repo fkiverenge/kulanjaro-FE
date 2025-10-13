@@ -1,0 +1,137 @@
+/* src/pages/PageStyles.css */
+
+/* --- General Page Styles --- */
+.page-container {
+  padding-bottom: 4rem;
+}
+
+.page-header {
+  height: 300px; /* Use a fixed pixel height instead of vh for consistency */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-header h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* Add text shadow for readability */
+}
+
+/* --- Applying Header Backgrounds with Specific Classes (More Reliable) --- */
+.about-page .page-header {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1524050239276-249aca310558?auto=format&fit=crop&q=80');
+}
+
+.services-page .page-header {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1533247071911-30d8909841f3?auto=format&fit=crop&q=80');
+}
+
+.contact-page .page-header {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1517404215381-12a93962b17f?auto=format&fit=crop&q=80');
+}
+
+
+.page-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  /* Reduced top padding to bring content closer to the header */
+  padding: 3rem 2rem; 
+}
+
+
+/* --- Services Page Specific Styles --- */
+.services-page-content .intro-paragraph {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 800px;
+  /* Reduced bottom margin */
+  margin: 0 auto 3rem auto;
+}
+
+/* General content section for alternating layouts */
+.content-section {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  padding: 2rem 0; /* Reduced vertical padding */
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+
+/* For alternating background colors for services sections */
+.services-page-content .content-section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.services-page-content .content-section:nth-child(odd) {
+  background-color: #f9f9f9;
+  padding: 3rem; /* Adjusted padding */
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.content-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.content-text h3 {
+  font-size: 2rem;
+  color: #2E7D32;
+  margin-bottom: 1rem;
+}
+
+.content-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.content-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.content-image img {
+  width: 100%;
+  max-width: 500px; 
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
+}
+
+/* --- About Page Specific Styles --- */
+.about-page-content .content-section {
+  background-color: transparent !important;
+  margin: 0 !important;
+  padding: 3rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.about-page-content .content-section:last-child {
+  border-bottom: none;
+}
+
+.about-page-content .content-image img {
+  max-width: 400px;
+  box-shadow: none;
+}
+
+.about-page-content h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2E7D32;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
